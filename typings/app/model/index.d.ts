@@ -2,17 +2,15 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportCcJj from '../../../app/model/cc_jj';
-import ExportChoiceQuestion from '../../../app/model/choice_question';
-import ExportLastOnes from '../../../app/model/last_ones';
+import ExportQuestion from '../../../app/model/question';
+import ExportRecord from '../../../app/model/record';
 import ExportUser from '../../../app/model/user';
 import ExportSchemaIndex from '../../../app/model/schema/index';
 
 declare module 'egg' {
   interface IModel {
-    CcJj: ReturnType<typeof ExportCcJj>;
-    ChoiceQuestion: ReturnType<typeof ExportChoiceQuestion>;
-    LastOnes: ReturnType<typeof ExportLastOnes>;
+    Question: ReturnType<typeof ExportQuestion>;
+    Record: ReturnType<typeof ExportRecord>;
     User: ReturnType<typeof ExportUser>;
     Schema: {
       Index: ReturnType<typeof ExportSchemaIndex>;

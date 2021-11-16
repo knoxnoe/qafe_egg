@@ -4,19 +4,35 @@ export const UserSchema = (Sequelize) => {
 
   return {
     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
-    name: { type: STRING(30), allowNull: false, },
-    age: { type: INTEGER, allowNull: false, },
-    created_at:{ type:  DATE, allowNull: false, }, 
-    updated_at: { type:  DATE, allowNull: false, },
+    name: STRING(30),
+    age: INTEGER,
+    created_at: DATE,
+    updated_at: DATE,
   }
 }
 
 export const QuestionSchema = (Sequelize) => {
-  const { STRING, INTEGER } = Sequelize;
+
+  const { STRING, INTEGER, DATE } = Sequelize;
+
+  return {
+    id: { type: INTEGER, primaryKey: true, autoIncrement: true},
+    type: STRING(30),
+    title: STRING(255),
+    answer: STRING(255),
+    created_at: DATE,
+    updated_at: DATE,
+  }
+}
+
+export const RecordSchema = (Sequelize) => {
+  
+  const { INTEGER, DATE } = Sequelize;
 
   return {
     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
-    title: STRING(30),
-    answer: STRING(30),
+    uid: INTEGER,
+    qid: INTEGER,
+    created_at: DATE,
   }
 }
