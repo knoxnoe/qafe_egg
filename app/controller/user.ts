@@ -19,6 +19,26 @@ class UserController extends BaseController {
 
     this.success(user)
   }
+
+  async index() {
+    const { ctx } = this;
+    
+    const users = await ctx.service.user.index();
+
+    this.success(users)
+  }
+
+
+  async show() {
+    console.log(this.ctx.params)
+    const { ctx } = this;
+  
+    const { id } = ctx.params;
+
+    const user = await ctx.service.user.show(id)
+
+    this.success(user)
+  }
 }
 
 export default UserController
