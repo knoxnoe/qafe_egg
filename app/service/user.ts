@@ -11,7 +11,6 @@ export default class User extends Service {
   // }
   public async show(id) {
     const user = await this.ctx.service.user.find(id)
-    console.log(user)
     if(!user) {
       this.ctx.throw(404, 'user not found')
     }

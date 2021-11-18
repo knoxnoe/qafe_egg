@@ -22,6 +22,10 @@ export const QuestionSchema = (Sequelize) => {
     answer: STRING(255),
     created_at: DATE,
     updated_at: DATE,
+    op1: STRING(64),
+    op2: STRING(64),
+    op3: STRING(64),
+    op4: STRING(64),
   }
 }
 

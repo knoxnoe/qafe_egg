@@ -3,13 +3,15 @@
 
 import 'egg';
 import ExportBaseController from '../../../app/controller/baseController';
-import ExportTopics from '../../../app/controller/topics';
+import ExportQuestion from '../../../app/controller/question';
+import ExportRecord from '../../../app/controller/record';
 import ExportUser from '../../../app/controller/user';
 
 declare module 'egg' {
   interface IController {
     baseController: ExportBaseController;
-    topics: ExportTopics;
+    question: ExportQuestion;
+    record: ExportRecord;
     user: ExportUser;
   }
 }

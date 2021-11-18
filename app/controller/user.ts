@@ -1,4 +1,5 @@
 import BaseController from "./baseController";
+import { addDate } from '../utils/index';
 
 const createRule = {
   name: 'string',
@@ -6,20 +7,21 @@ const createRule = {
 }
 
 class UserController extends BaseController {
+
+  // post
   async create() {
     const ctx = this.ctx;
 
     ctx.validate(createRule, ctx.request.body)
 
-    const date = new Date();
-    
-    const userData = {...ctx.request.body, created_at: date, updated_at:date}
+    const userData = {...ctx.request.body, ...addDate()}
 
     const user = await ctx.service.user.create(userData);
 
     this.success(user)
   }
 
+  // get
   async index() {
     const { ctx } = this;
     
@@ -29,16 +31,6 @@ class UserController extends BaseController {
   }
 
 
-  async show() {
-    console.log(this.ctx.params)
-    const { ctx } = this;
-  
-    const { id } = ctx.params;
-
-    const user = await ctx.service.user.show(id)
-
-    this.success(user)
-  }
 }
 
 export default UserController

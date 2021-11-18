@@ -1,0 +1,1 @@
+ALTER TABLE question ADD COLUMN `op1` varchar(64) DEFAULT NULL comment '选项1', ADD COLUMN `op2` varchar(64) DEFAULT NULL comment '选项2', ADD COLUMN `op3` varchar(64) DEFAULT NULL comment '选项3', ADD COLUMN `op4` varchar(64) DEFAULT NULL comment '选项4';
