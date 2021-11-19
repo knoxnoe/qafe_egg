@@ -27,7 +27,6 @@
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^6.0.0",
     "egg-validate": "^2.0.2",
-    "eslint-config-prettier": "^8.3.0",
     "mysql2": "^2.3.3"
   },
   "devDependencies": {
@@ -39,7 +38,7 @@
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
-    "eslint": "^6.8.0",
+    "eslint": "^6.7.2",
     "eslint-config-egg": "^8.0.0",
     "sequelize-cli": "^6.3.0",
     "tslib": "^1.9.0",
