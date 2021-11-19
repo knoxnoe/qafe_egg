@@ -8,6 +8,6 @@ export const addDate = () => {
   
   return { 
     created_at: date, 
-    updated_at:date
+    updated_at: date
   }
 }

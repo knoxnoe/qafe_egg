@@ -3,7 +3,6 @@ import BaseController from "./baseController";
 class RecordController extends BaseController {
 
   async index() {
-
   
   }
 
