@@ -30,7 +30,7 @@ class QuestionController extends BaseController {
     const { ctx } = this;
     
     const questions = await ctx.service.question.index();
-    //console.log(questions)
+    // console.log(questions)
     this.success(questions);
   }
 }
