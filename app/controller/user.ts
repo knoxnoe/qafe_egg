@@ -24,8 +24,10 @@ class UserController extends BaseController {
   // get
   async index() {
     const { ctx } = this;
+
+    const { id } = ctx.request.query;
     
-    const users = await ctx.service.user.index();
+    const users = await ctx.service.user.index(id);
 
     this.success(users)
   }

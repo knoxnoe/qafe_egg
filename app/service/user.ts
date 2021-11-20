@@ -17,7 +17,10 @@ export default class User extends Service {
     return user
   }
 
-  public async index() {
+  public async index(id) {
+    if(id) {
+      return this.ctx.model.User.findByPk(id)
+    }
     return this.ctx.model.User.findAll()
   }
 

@@ -25,3 +25,67 @@
 ### 3、npm run start
 
 
+## API
+```
+user
+
+/api/v1/user
+
+  get
+    param 获取用户列表
+      空
+    
+    param 获取单个用户
+      {
+        id: number
+      }
+
+  post
+    param 创建一个用户
+    {
+      name: 'string',
+      age: 'integer'
+    }
+
+/api/v1/question
+
+  get 
+    param 获取所有问题
+      空
+      
+    param 获取特定问题
+    {
+      id: number
+    }
+
+  post 
+    param 新建一个问题
+    {
+      type: ['multi', 'single'],
+      title: 'string',
+      answer: 'string',
+      op1:'string',
+      op2: 'string',
+      op3: 'string',
+      op4: 'string',
+    }
+
+/api/v1/question/commit
+  post
+    param 多选
+    {
+      answer: [1,2]
+    }
+      
+    param 单选
+    {
+      answer: [1]
+    }
+
+/api/v1/record
+
+
+
+```
+
+
